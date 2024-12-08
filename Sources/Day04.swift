@@ -1,28 +1,6 @@
 import Algorithms
 
 
-struct Point: Equatable {
-  let x: Int
-  let y: Int
-  
-  static func zero() -> Point {
-    Point(x: 0, y: 0)
-  }
-  
-func step(_ delta: Delta) -> Point {
-    Point(x: x + delta.dx, y: y + delta.dy)
-  }
-}
-
-struct Delta: Equatable, Hashable {
-  let dx: Int
-  let dy: Int
-  
-  func opposite() -> Delta {
-    Delta(dx: -dx, dy: -dy)
-  }
-}
-
 struct FieldTraverseIterator: IteratorProtocol {
   let traverser: FieldTraverser
   let startPoints: [Point]
