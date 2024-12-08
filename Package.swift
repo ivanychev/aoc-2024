@@ -5,11 +5,12 @@ let dependencies: [Target.Dependency] = [
   .product(name: "Algorithms", package: "swift-algorithms"),
   .product(name: "Collections", package: "swift-collections"),
   .product(name: "ArgumentParser", package: "swift-argument-parser"),
+  .product(name: "BigInt", package: "BigInt"),
 ]
 
 let package = Package(
   name: "AdventOfCode",
-  platforms: [.macOS(.v13), .iOS(.v16), .watchOS(.v9), .tvOS(.v16)],
+  platforms: [.macOS(.v15)],
   dependencies: [
     .package(
       url: "https://github.com/apple/swift-algorithms.git",
@@ -20,6 +21,7 @@ let package = Package(
     .package(
       url: "https://github.com/apple/swift-argument-parser.git",
       .upToNextMajor(from: "1.5.0")),
+    .package(url: "https://github.com/attaswift/BigInt.git", from: "5.5.1"),
     .package(
       url: "https://github.com/swiftlang/swift-format.git",
       .upToNextMajor(from: "600.0.0"))
