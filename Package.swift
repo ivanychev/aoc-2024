@@ -6,6 +6,7 @@ let dependencies: [Target.Dependency] = [
   .product(name: "Collections", package: "swift-collections"),
   .product(name: "ArgumentParser", package: "swift-argument-parser"),
   .product(name: "BigInt", package: "BigInt"),
+  .product(name: "LRUCache", package: "LRUCache"),
 ]
 
 let package = Package(
@@ -24,7 +25,8 @@ let package = Package(
     .package(url: "https://github.com/attaswift/BigInt.git", from: "5.5.1"),
     .package(
       url: "https://github.com/swiftlang/swift-format.git",
-      .upToNextMajor(from: "600.0.0"))
+      .upToNextMajor(from: "600.0.0")),
+    .package(url: "https://github.com/nicklockwood/LRUCache.git", .upToNextMinor(from: "1.0.7")),
   ],
   targets: [
     .executableTarget(
