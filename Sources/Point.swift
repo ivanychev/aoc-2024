@@ -13,7 +13,23 @@ struct Point: Equatable, Hashable {
     Point(x: 0, y: 0)
   }
   
-func step(_ delta: Delta) -> Point {
+  func step(_ delta: Delta) -> Point {
     Point(x: x + delta.dx, y: y + delta.dy)
+  }
+  
+  func left() -> Point {
+    step(DELTA_LEFT)
+  }
+  
+  func right() -> Point {
+    step(DELTA_RIGHT)
+  }
+  
+  func up() -> Point {
+    step(DELTA_UP)
+  }
+  
+  func down() -> Point {
+    step(DELTA_DOWN)
   }
 }
