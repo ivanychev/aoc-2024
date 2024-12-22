@@ -16,6 +16,27 @@ struct Delta: Equatable, Hashable {
   func turnClockwise() -> Delta {
     Delta(dx: -dy, dy: dx)
   }
+  
+  func isOpposite(_ other: Delta) -> Bool {
+    return (dx == other.dx && dx == 0 && dy == -other.dy && abs(dy) == 1) ||
+    (dy == other.dy && dy == 0 && dx == -other.dx && abs(dx) == 1)
+  }
+  
+  static func up() -> Delta {
+    DELTA_UP
+  }
+  
+  static func down() -> Delta {
+    DELTA_DOWN
+  }
+  
+  static func left() -> Delta {
+    DELTA_LEFT
+  }
+  
+  static func right() -> Delta {
+    DELTA_RIGHT
+  }
 }
 
 let DELTA_UP = Delta(dx: 0, dy: -1)

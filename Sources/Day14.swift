@@ -85,6 +85,7 @@ fileprivate struct RobotField {
     default:
       assert(false)
     }
+    return 0
   }
 }
 

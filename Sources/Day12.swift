@@ -118,6 +118,7 @@ fileprivate class GarderFieldComponent {
     default:
       assert(false)
     }
+    return false
   }
   
   func isAdjacent(_ first: Point, _ second: Point) -> Bool {

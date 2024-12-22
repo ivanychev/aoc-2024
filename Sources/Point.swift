@@ -29,6 +29,10 @@ struct Point: Equatable, Hashable {
     step(DELTA_UP)
   }
   
+  func manhattanDistance(to other: Point) -> Int {
+    abs(x - other.x) + abs(y - other.y)
+  }
+  
   func down() -> Point {
     step(DELTA_DOWN)
   }
