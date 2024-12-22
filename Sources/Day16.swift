@@ -196,7 +196,7 @@ struct Day16: AdventDay {
   
   func part2() -> Any {
     let field = DeerField.fromChars(chars)
-    var djkstra = DeerFieldDjikstra(field: field)
+    let djkstra = DeerFieldDjikstra(field: field)
     djkstra.build()
     let optimalPoints = djkstra.getOptimalNodes().map({$0.pos})
     return Set(optimalPoints).count
