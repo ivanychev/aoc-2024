@@ -1,6 +1,6 @@
 import Algorithms
 
-struct Template: AdventDay {
+struct Day21: AdventDay {
   // Save your data in a corresponding text file in the `Data` directory.
   var data: String
   var rows: [[Character]] { data.components(separatedBy: "\n").filter({$0.count > 0}).map({Array($0)}) }
